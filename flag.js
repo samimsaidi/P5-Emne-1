@@ -60,6 +60,12 @@ function mousePressed() {
     flag ++
     return false;
   }
+  if (flag === 8) {
+    sydAfrika();
+    console.log("Flag: Sydafrika");
+    flag ++
+    return false;
+  }
 }
 
 function japan() {
@@ -141,4 +147,69 @@ function israel() {
   noStroke();
   fill(255);
   rect(0, 50, 600, 250); // rect(x, y, width, height) 
+  noFill();
+  strokeWeight(10);
+  stroke(1, 56, 183); // Udfyld figuren med brun farve
+  beginShape(); 
+  vertex(220, 200); 
+  vertex(350, 200);
+  vertex(285, 100);
+  endShape(CLOSE); 
+  beginShape(); 
+  vertex(220, 140); 
+  vertex(350, 140);
+  vertex(285, 240);
+  endShape(CLOSE); 
+}
+
+function sydAfrika() {
+  background(0, 119, 73);
+  noStroke();
+  
+  beginShape(); 
+  fill(255, 184, 28);
+  vertex(0, 60);
+  vertex(230, 175);
+  vertex(0, 290);
+  endShape(CLOSE); 
+  
+  beginShape(); 
+  fill(0);
+  vertex(0, 80);
+  vertex(200, 175);
+  vertex(0, 270);
+  endShape(CLOSE); 
+  
+  beginShape(); 
+  fill(255);
+  vertex(50, 0);
+  vertex(320, 140);
+  vertex(600, 140);
+  vertex(600, 0);
+  endShape(CLOSE); 
+  
+  beginShape(); 
+  fill(244,60,49);
+  vertex(90, 0);
+  vertex(320, 120);
+  vertex(600, 120);
+  vertex(600, 0);
+  endShape(CLOSE); 
+  
+  beginShape(); 
+  fill(255);
+  vertex(50, 350);
+  vertex(320, 240);
+  vertex(600, 240);
+  vertex(600, 350);
+  endShape(CLOSE); 
+  
+  beginShape(); 
+  fill(0,20,137);
+  vertex(50, 370);
+  vertex(320, 260);
+  vertex(600, 260);
+  vertex(600, 350);
+  endShape(CLOSE); 
+  
 }
