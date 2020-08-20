@@ -1,13 +1,15 @@
 let flag = 0;
 function setup() {
-  createCanvas(600, 350) // Laver canvas som skaber             baggrunden med en størrelse på 500 og 200
-  console.log("Funktion setup [JA]"); // Kommentar for at       tjekke for debugs (hvis der er nogen)
-  background(255);
-  textSize(32);
-  text('Klik et sted for at skifte flag', 110, 180);
+  createCanvas(600, 350) // Laver canvas som skaber             baggrunden med en størrelse på 600 og 350
+  start();
 }
 
-function draw() {
+function start() {
+  background(255);
+  fill(0);
+  textSize(32);
+  text('Klik et sted for at skifte flag', 110, 180);
+  console.log("Started!");
 }
 
 
@@ -64,6 +66,12 @@ function mousePressed() {
     sydAfrika();
     console.log("Flag: Sydafrika");
     flag ++
+    return false;
+  }
+  if (flag === 9) {
+    start();
+    console.log("Finished! Starting over...");
+    flag = 0
     return false;
   }
 }
