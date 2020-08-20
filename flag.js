@@ -42,17 +42,35 @@ function mousePressed() {
     flag ++
     return false;
   }
+  if (flag === 5) {
+    tjekkiet();
+    console.log("Flag: Tjekkiet");
+    flag ++
+    return false;
+  }
+  if (flag === 6) {
+    maldiverne();
+    console.log("Flag: Maldiverne");
+    flag ++
+    return false;
+  }
+  if (flag === 7) {
+    israel();
+    console.log("Flag: Israel");
+    flag ++
+    return false;
+  }
 }
 
 function japan() {
-  background(255)
+  background(255);
   noStroke();
   fill(255,0,0);
   circle(300,175,100);
 }
 
 function frankrig() {
-  background(255)
+  background(255);
   noStroke();
   fill(0,0,255);
   rect(0, 0, 200, 350); // rect(x, y, width, height)
@@ -61,7 +79,7 @@ function frankrig() {
 }
 
 function indonesien() {
-  background(255)
+  background(255);
   noStroke();
   fill(255,0,0);
   rect(0, 0, 600, 175); // rect(x, y, width, height)
@@ -85,5 +103,42 @@ function kuwait() {
   rect(0, 0, 600, 125); // rect(x, y, width, height)
   fill(206,17,38);
   rect(0, 225, 600, 125); // rect(x, y, width, height)
-  
+  beginShape(); 
+  fill(0);
+  vertex(0, 0);
+  vertex(125, 125);
+  vertex(125, 225);
+  vertex(0, 350);
+  endShape(CLOSE); 
+}
+
+function tjekkiet() {
+  background(255);
+  noStroke();
+  fill(215, 20, 26);
+  rect(0, 175, 600, 175); // rect(x, y, width, height)
+  beginShape(); 
+  fill(17, 69, 126);
+  vertex(0, 0);
+  vertex(200, 175);
+  vertex(0, 350);
+  endShape(CLOSE); 
+}
+
+function maldiverne() {
+  background(210, 16, 52);
+  noStroke();
+  fill(0, 126, 58);
+  rect(75, 75, 450, 200); // rect(x, y, width, height) 
+  fill(255)
+  ellipse(325, 175, 150, 150);
+  fill(0, 126, 58)
+  ellipse(350, 175, 150, 150);
+}
+
+function israel() {
+  background(1, 56, 183);
+  noStroke();
+  fill(255);
+  rect(0, 50, 600, 250); // rect(x, y, width, height) 
 }
